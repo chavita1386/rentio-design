@@ -1,0 +1,35 @@
+.sidebar-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  box-shadow: 6px 0px 15px 0px rgba($font-secondary, .1);
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 1.5rem 0 1.5rem;
+  &__photo {
+    $width: 80px;
+    width: $width;
+    height: $width;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  &__name {
+    width: 100%;
+    color: $font-primary;
+  }
+  &__info {
+    padding: 0;
+    margin: 0;
+    color: $font-secondary;
+  }
+}
+
+.logout {
+  margin: 2rem 1.5rem 0 1.5rem;
+}

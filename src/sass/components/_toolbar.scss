@@ -1,0 +1,10 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__search {
+    border: 0px solid transparent;
+    background-color: transparent;
+    padding: 5px 10px;
+  }
+}

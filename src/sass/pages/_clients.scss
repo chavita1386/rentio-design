@@ -1,0 +1,19 @@
+.filterbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  .title {
+    display: inline-block;
+    font-weight: 400;
+  }
+  .info-clients {
+    display: inline-block;
+    color: $font-secondary;
+    font-size: .9rem;
+    margin-left: 1rem;
+  }
+  .filterbar {
+    align-self: center;
+  }
+}

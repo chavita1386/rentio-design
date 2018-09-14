@@ -1,0 +1,39 @@
+.input {
+  padding: 8px 12px;
+  border: 1px solid $font-secondary;
+  &:focus,
+  &:active {
+    border: 1px solid $accent-color;
+  }
+}
+
+.checkbox {
+  display: none;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $accent-color;
+  }
+  &:focus,
+  &:active {
+    border: 1px solid $accent-color;
+  }
+  &+label {
+    border: 1px solid $font-secondary;
+    background-color: lighten($font-secondary, 40%);
+    border-radius: 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    transition: all .3s;
+    margin: 0 auto;
+  }
+  &:checked+label {
+    border: 1px solid $brand-color;
+    border-radius: 50%;
+    background-color: $brand-color;
+  }
+}
+
+.label {
+  margin-left: 5px;
+}

@@ -1,0 +1,73 @@
+.button {
+  border-radius: 1rem;
+  padding: .6rem 1rem;
+  text-transform: uppercase;
+  font-size: .7rem;
+  cursor: pointer;
+  border: 1px solid $button;
+  background-color: $button;
+  color: $font-secondary;
+  &--primary {
+    color: $white;
+    border: 1px solid $brand-color;
+    background-color: $brand-color;
+    &:hover {
+      background-color: darken($brand-color, 20%);
+    }
+  }
+  &--filter {
+    padding: .6rem 1.5rem;
+    border: 1px solid darken($base-hover, 10%);
+  }
+  &--left {
+    border-radius: 1rem 0 0 1rem;
+    text-transform: capitalize;
+  }
+  &--center {
+    border-radius: 0;
+    text-transform: capitalize; // border-right: 1px solid darken($base-hover, 10%);
+    // border-left: 1px solid darken($base-hover, 10%);
+  }
+  &--right {
+    border-radius: 0 1rem 1rem 0;
+    text-transform: capitalize;
+  }
+  &.selected {
+    color: $white;
+    border: 1px solid $brand-color;
+    background-color: $brand-color;
+    &:hover {
+      color: $white;
+      cursor: default;
+      background-color: $brand-color;
+    }
+  }
+  &:hover {
+    color: $white;
+    border: 1px solid $brand-color;
+    background-color: darken($brand-color, 20%);
+  }
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: 0;
+  }
+}
+
+.button-check {
+  padding: .6rem 1rem;
+  text-transform: uppercase;
+  font-size: .7rem;
+  cursor: pointer;
+  border: 1px solid $font-secondary;
+  background-color: $base-color;
+  color: $font-secondary;
+  &:hover,
+  &:active {
+    background-color: $base-color;
+    outline: none;
+  }
+  option {
+    padding: 3px 0;
+    display: block;
+  }
+}

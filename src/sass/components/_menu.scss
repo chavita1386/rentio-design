@@ -1,0 +1,30 @@
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  &__item {
+    padding: .5rem 0;
+  }
+  &__link {
+    display: block;
+    padding: .4rem 0 .4rem 1.5rem;
+    text-transform: capitalize;
+    border-left: 4px solid transparent;
+    &.selected {
+      color: $brand-color;
+      border-left: 4px solid $brand-color;
+      font-weight: 600;
+    }
+  }
+}
+
+.icon {
+  margin-right: 16px;
+}
+
+.icon--search {
+  margin-right: 5px;
+  color: $font-secondary;
+  transform: rotate(90deg);
+}
