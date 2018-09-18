@@ -19,7 +19,7 @@
         <button class="button button--filter button--center">Week</button>
         <button class="button button--filter button--right">Month</button>
       </div>
-      <select name="sortBy" id="sortBy" class="button-check">
+      <select name="sortBy" id="sortBy" class="button-check" v-model="sortBy">
         <option value="0" selected>Sort by</option>
         <option value="1">Paid</option>
         <option value="2">Unpaid</option>
@@ -42,7 +42,7 @@
         </thead>
         <tbody>
           <!-- eslint-disable-next-line -->
-          <row-client v-for="client in Clients" :key="client.id" :client="client" @test="test()"></row-client>
+          <row-client v-for="client in showClients" :key="client.id" :client="client" @test="test()"></row-client>
         </tbody>
       </table>
     </div>
@@ -59,6 +59,7 @@ export default {
     return {
       isSelectedAll: false,
       modalCustomer: false,
+      sortBy: '0',
       Clients:
       [
         {
@@ -87,6 +88,15 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    showClients() {
+      if (this.sortBy === '0') {
+        return this.Clients;
+      }
+      const sort = this.sortBy === '1';
+      return this.Clients.filter(client => client.isPaid === sort);
+    },
   },
   methods: {
     selectAll() {

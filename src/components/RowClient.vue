@@ -26,7 +26,7 @@ export default {
   },
   computed: {
     transactionDateFormat() {
-      return moment(this.client.transactionDate).format('MMM Do, YYYY');
+      return moment(new Date(this.client.transactionDate).toUTCString()).format('MMM Do, YYYY');
     },
   },
   methods: {
